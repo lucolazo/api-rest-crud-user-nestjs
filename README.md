@@ -1,6 +1,6 @@
 # Microservicio de Pagos (Stripe + NestJS)
 
-Trabajo Práctico - Programación Avanzada (Licenciatura en Sistemas de Información)
+Trabajo Práctico 4 - Programación Avanzada (Licenciatura en Sistemas de Información)
 
 ## Requisitos previos
 
@@ -17,3 +17,8 @@ Trabajo Práctico - Programación Avanzada (Licenciatura en Sistemas de Informac
 # Desarrollo
 npm run start:dev
 ```
+
+## Rutas Principales
+
+1. POST /payments/create-payment-session: Recibe los datos del cliente, crea la sesión de pago en Stripe y devuelve la URL de redirección.
+2. POST /payments/webhook: Recibe el aviso de Stripe cuando se concreta el cobro, validando la firma de seguridad mediante el cuerpo crudo (rawBody)

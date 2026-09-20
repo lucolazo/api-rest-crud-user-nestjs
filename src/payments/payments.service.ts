@@ -35,7 +35,7 @@ export class PaymentsService {
       cancel_url: cancelUrl,
       payment_intent_data: {
         metadata: {
-          orderId: orderId, // Requerido para la Entrega 2
+          orderId: orderId,
         },
       },
     });
@@ -73,7 +73,7 @@ export class PaymentsService {
         orderId = paymentIntent.metadata?.orderId;
       }
 
-      // Registro en consola exigido por la entrega 2
+      // Registro en consola
       console.log(`[Webhook] ¡Pago exitoso! orderId recuperado: ${orderId}`);
     } else {
       console.log(`[Webhook] Evento recibido no manejado: ${event.type}`);
