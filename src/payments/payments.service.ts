@@ -1,11 +1,12 @@
 import { Injectable } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import Stripe from 'stripe';
 import { PaymentSessionDto } from './dto/payment-session.dto';
 
 @Injectable()
 export class PaymentsService {
   private stripe = new Stripe(process.env.STRIPE_SECRET!, {
-    apiVersion: '2025-02-28.acacia' as any,
+    apiVersion: '2026-08-26.dahlia' as any,
   });
 
   async createPaymentSession(paymentSessionDto: PaymentSessionDto) {

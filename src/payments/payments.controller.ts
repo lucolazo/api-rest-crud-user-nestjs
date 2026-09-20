@@ -8,7 +8,7 @@ import {
   Req,
   Res,
 } from '@nestjs/common';
-import { Request, Response } from 'express';
+import type { Request, Response } from 'express';
 import { PaymentSessionDto } from './dto/payment-session.dto';
 import { PaymentsService } from './payments.service';
 
